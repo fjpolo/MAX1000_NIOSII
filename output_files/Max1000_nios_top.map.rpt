@@ -1,0 +1,512 @@
+Analysis & Synthesis report for Max1000_nios_top
+Fri Mar 09 15:00:07 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Fri Mar 09 15:00:07 2018           ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; Max1000_nios_top                            ;
+; Top-level Entity Name              ; nios_lab_top                                ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; 10M08SAU169C8G     ;                    ;
+; Top-level entity name                                                      ; nios_lab_top       ; Max1000_nios_top   ;
+; Family name                                                                ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Fri Mar 09 14:59:17 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Max1000_nios_lab -c Max1000_nios_top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12248): Elaborating Platform Designer system entity "nios_sys.qsys"
+Info (12250): 2018.03.09.14:59:35 Progress: Loading MAX1000_nios_lab/nios_sys.qsys
+Info (12250): 2018.03.09.14:59:36 Progress: Reading input file
+Info (12250): 2018.03.09.14:59:37 Progress: Adding clk12mhz [clock_source 17.1]
+Info (12250): 2018.03.09.14:59:38 Progress: Parameterizing module clk12mhz
+Info (12250): 2018.03.09.14:59:38 Progress: Adding jtag_uart [altera_avalon_jtag_uart 17.1]
+Info (12250): 2018.03.09.14:59:38 Progress: Parameterizing module jtag_uart
+Info (12250): 2018.03.09.14:59:38 Progress: Adding nios [altera_nios2_gen2 17.1]
+Info (12250): 2018.03.09.14:59:39 Progress: Parameterizing module nios
+Info (12250): 2018.03.09.14:59:39 Progress: Adding onchip_ram [altera_avalon_onchip_memory2 17.1]
+Info (12250): 2018.03.09.14:59:39 Progress: Parameterizing module onchip_ram
+Info (12250): 2018.03.09.14:59:39 Progress: Adding pio_leds [altera_avalon_pio 17.1]
+Info (12250): 2018.03.09.14:59:39 Progress: Parameterizing module pio_leds
+Info (12250): 2018.03.09.14:59:39 Progress: Adding pio_lis3dh [altera_avalon_pio 17.1]
+Info (12250): 2018.03.09.14:59:39 Progress: Parameterizing module pio_lis3dh
+Info (12250): 2018.03.09.14:59:39 Progress: Adding pll [altpll 17.1]
+Info (12250): 2018.03.09.14:59:40 Progress: Parameterizing module pll
+Info (12250): 2018.03.09.14:59:40 Progress: Adding spi_lis3dh [altera_avalon_spi 17.1]
+Info (12250): 2018.03.09.14:59:40 Progress: Parameterizing module spi_lis3dh
+Info (12250): 2018.03.09.14:59:40 Progress: Adding sys_id [altera_avalon_sysid_qsys 17.1]
+Info (12250): 2018.03.09.14:59:40 Progress: Parameterizing module sys_id
+Info (12250): 2018.03.09.14:59:40 Progress: Building connections
+Info (12250): 2018.03.09.14:59:40 Progress: Parameterizing connections
+Info (12250): 2018.03.09.14:59:40 Progress: Validating
+Info (12250): 2018.03.09.14:59:42 Progress: Done reading input file
+Info (12250): Nios_sys.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info (12250): Nios_sys.pio_lis3dh: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info (12250): Nios_sys.sys_id: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info (12250): Nios_sys.sys_id: Time stamp will be automatically updated when this component is generated.
+Warning (12251): Nios_sys.pio_lis3dh: pio_lis3dh.external_connection must be exported, or connected to a matching conduit.
+Warning (12251): Nios_sys.sys_id: sys_id.control_slave must be connected to an Avalon-MM master
+Info (12250): Nios_sys: Generating nios_sys "nios_sys" for QUARTUS_SYNTH
+Info (12250): Inserting clock-crossing logic between cmd_demux.src2 and cmd_mux_002.sink0
+Info (12250): Inserting clock-crossing logic between rsp_demux_002.src0 and rsp_mux.sink2
+Info (12250): Jtag_uart: Starting RTL generation for module 'nios_sys_jtag_uart'
+Info (12250): Jtag_uart:   Generation command is [exec D:/programmen/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I D:/programmen/intelfpga_lite/17.1/quartus/bin64/perl/lib -I D:/programmen/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I D:/programmen/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I D:/programmen/intelfpga_lite/17.1/quartus/sopc_builder/bin -I D:/programmen/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/programmen/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- D:/programmen/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=nios_sys_jtag_uart --dir=C:/Users/franc/AppData/Local/Temp/alt7599_3836121471320863121.dir/0002_jtag_uart_gen/ --quartus_dir=D:/programmen/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/franc/AppData/Local/Temp/alt7599_3836121471320863121.dir/0002_jtag_uart_gen//nios_sys_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Jtag_uart: Done RTL generation for module 'nios_sys_jtag_uart'
+Info (12250): Jtag_uart: "nios_sys" instantiated altera_avalon_jtag_uart "jtag_uart"
+Info (12250): Nios: "nios_sys" instantiated altera_nios2_gen2 "nios"
+Info (12250): Onchip_ram: Starting RTL generation for module 'nios_sys_onchip_ram'
+Info (12250): Onchip_ram:   Generation command is [exec D:/programmen/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I D:/programmen/intelfpga_lite/17.1/quartus/bin64/perl/lib -I D:/programmen/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I D:/programmen/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I D:/programmen/intelfpga_lite/17.1/quartus/sopc_builder/bin -I D:/programmen/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/programmen/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/programmen/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=nios_sys_onchip_ram --dir=C:/Users/franc/AppData/Local/Temp/alt7599_3836121471320863121.dir/0003_onchip_ram_gen/ --quartus_dir=D:/programmen/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/franc/AppData/Local/Temp/alt7599_3836121471320863121.dir/0003_onchip_ram_gen//nios_sys_onchip_ram_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Onchip_ram: Done RTL generation for module 'nios_sys_onchip_ram'
+Info (12250): Onchip_ram: "nios_sys" instantiated altera_avalon_onchip_memory2 "onchip_ram"
+Info (12250): Pio_leds: Starting RTL generation for module 'nios_sys_pio_leds'
+Info (12250): Pio_leds:   Generation command is [exec D:/programmen/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I D:/programmen/intelfpga_lite/17.1/quartus/bin64/perl/lib -I D:/programmen/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I D:/programmen/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I D:/programmen/intelfpga_lite/17.1/quartus/sopc_builder/bin -I D:/programmen/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/programmen/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/programmen/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_sys_pio_leds --dir=C:/Users/franc/AppData/Local/Temp/alt7599_3836121471320863121.dir/0004_pio_leds_gen/ --quartus_dir=D:/programmen/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/franc/AppData/Local/Temp/alt7599_3836121471320863121.dir/0004_pio_leds_gen//nios_sys_pio_leds_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Pio_leds: Done RTL generation for module 'nios_sys_pio_leds'
+Info (12250): Pio_leds: "nios_sys" instantiated altera_avalon_pio "pio_leds"
+Info (12250): Pio_lis3dh: Starting RTL generation for module 'nios_sys_pio_lis3dh'
+Info (12250): Pio_lis3dh:   Generation command is [exec D:/programmen/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I D:/programmen/intelfpga_lite/17.1/quartus/bin64/perl/lib -I D:/programmen/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I D:/programmen/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I D:/programmen/intelfpga_lite/17.1/quartus/sopc_builder/bin -I D:/programmen/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/programmen/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/programmen/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_sys_pio_lis3dh --dir=C:/Users/franc/AppData/Local/Temp/alt7599_3836121471320863121.dir/0005_pio_lis3dh_gen/ --quartus_dir=D:/programmen/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/franc/AppData/Local/Temp/alt7599_3836121471320863121.dir/0005_pio_lis3dh_gen//nios_sys_pio_lis3dh_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Pio_lis3dh: Done RTL generation for module 'nios_sys_pio_lis3dh'
+Info (12250): Pio_lis3dh: "nios_sys" instantiated altera_avalon_pio "pio_lis3dh"
+Info (12250): Pll: "nios_sys" instantiated altpll "pll"
+Info (12250): Spi_lis3dh: Starting RTL generation for module 'nios_sys_spi_lis3dh'
+Info (12250): Spi_lis3dh:   Generation command is [exec D:/programmen/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I D:/programmen/intelfpga_lite/17.1/quartus/bin64/perl/lib -I D:/programmen/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I D:/programmen/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I D:/programmen/intelfpga_lite/17.1/quartus/sopc_builder/bin -I D:/programmen/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/programmen/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi -- D:/programmen/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi/generate_rtl.pl --name=nios_sys_spi_lis3dh --dir=C:/Users/franc/AppData/Local/Temp/alt7599_3836121471320863121.dir/0008_spi_lis3dh_gen/ --quartus_dir=D:/programmen/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/franc/AppData/Local/Temp/alt7599_3836121471320863121.dir/0008_spi_lis3dh_gen//nios_sys_spi_lis3dh_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Spi_lis3dh: Done RTL generation for module 'nios_sys_spi_lis3dh'
+Info (12250): Spi_lis3dh: "nios_sys" instantiated altera_avalon_spi "spi_lis3dh"
+Info (12250): Sys_id: "nios_sys" instantiated altera_avalon_sysid_qsys "sys_id"
+Info (12250): Avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info (12250): Avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info (12250): Avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info (12250): Avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info (12250): Avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info (12250): Avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info (12250): Avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info (12250): Mm_interconnect_0: "nios_sys" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info (12250): Irq_mapper: "nios_sys" instantiated altera_irq_mapper "irq_mapper"
+Info (12250): Rst_controller: "nios_sys" instantiated altera_reset_controller "rst_controller"
+Info (12250): Cpu: Starting RTL generation for module 'nios_sys_nios_cpu'
+Info (12250): Cpu:   Generation command is [exec D:/Programmen/intelFPGA_lite/17.1/quartus/bin64//eperlcmd.exe -I D:/Programmen/intelFPGA_lite/17.1/quartus/bin64//perl/lib -I D:/programmen/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I D:/programmen/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I D:/programmen/intelfpga_lite/17.1/quartus/sopc_builder/bin -I D:/programmen/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I D:/programmen/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I D:/programmen/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I D:/programmen/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- D:/programmen/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=nios_sys_nios_cpu --dir=C:/Users/franc/AppData/Local/Temp/alt7599_3836121471320863121.dir/0012_cpu_gen/ --quartus_bindir=D:/Programmen/intelFPGA_lite/17.1/quartus/bin64/ --verilog --config=C:/Users/franc/AppData/Local/Temp/alt7599_3836121471320863121.dir/0012_cpu_gen//nios_sys_nios_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info (12250): Cpu: # 2018.03.09 15:00:01 (*) Starting Nios II generation
+Info (12250): Cpu: # 2018.03.09 15:00:01 (*)   Checking for plaintext license.
+Info (12250): Cpu: # 2018.03.09 15:00:02 (*)   Couldn't query license setup in Quartus directory D:/Programmen/intelFPGA_lite/17.1/quartus/bin64/
+Info (12250): Cpu: # 2018.03.09 15:00:02 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info (12250): Cpu: # 2018.03.09 15:00:02 (*)   LM_LICENSE_FILE environment variable is empty
+Info (12250): Cpu: # 2018.03.09 15:00:02 (*)   Plaintext license not found.
+Info (12250): Cpu: # 2018.03.09 15:00:02 (*)   No license required to generate encrypted Nios II/e.
+Info (12250): Cpu: # 2018.03.09 15:00:02 (*)   Elaborating CPU configuration settings
+Info (12250): Cpu: # 2018.03.09 15:00:02 (*)   Creating all objects for CPU
+Info (12250): Cpu: # 2018.03.09 15:00:03 (*)   Generating RTL from CPU objects
+Info (12250): Cpu: # 2018.03.09 15:00:03 (*)   Creating plain-text RTL
+Info (12250): Cpu: # 2018.03.09 15:00:04 (*) Done Nios II generation
+Info (12250): Cpu: Done RTL generation for module 'nios_sys_nios_cpu'
+Info (12250): Cpu: "nios" instantiated altera_nios2_gen2_unit "cpu"
+Info (12250): Nios_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios_data_master_translator"
+Info (12250): Jtag_uart_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_avalon_jtag_slave_translator"
+Info (12250): Nios_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios_data_master_agent"
+Info (12250): Jtag_uart_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_avalon_jtag_slave_agent"
+Info (12250): Jtag_uart_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_avalon_jtag_slave_agent_rsp_fifo"
+Info (12250): Router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info (12250): Router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info (12250): Router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info (12250): Router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info (12250): Cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info (12250): Cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info (12250): Cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info (12250): Cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info (12250): Reusing file D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/db/ip/nios_sys/submodules/altera_merlin_arbitrator.sv
+Info (12250): Rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info (12250): Rsp_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_002"
+Info (12250): Rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info (12250): Reusing file D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/db/ip/nios_sys/submodules/altera_merlin_arbitrator.sv
+Info (12250): Rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info (12250): Reusing file D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/db/ip/nios_sys/submodules/altera_merlin_arbitrator.sv
+Info (12250): Crosser: "mm_interconnect_0" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info (12250): Avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info (12250): Error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info (12250): Nios_sys: Done "nios_sys" with 33 modules, 50 files
+Info (12249): Finished elaborating Platform Designer system entity "nios_sys.qsys"
+Info (12021): Found 2 design units, including 1 entities, in source file nios_sys/synthesis/nios_sys.vhd
+    Info (12022): Found design unit 1: nios_sys-rtl File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/nios_sys.vhd Line: 22
+    Info (12023): Found entity 1: nios_sys File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/nios_sys.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file nios_sys/synthesis/nios_sys_rst_controller.vhd
+    Info (12022): Found design unit 1: nios_sys_rst_controller-rtl File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/nios_sys_rst_controller.vhd Line: 75
+    Info (12023): Found entity 1: nios_sys_rst_controller File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/nios_sys_rst_controller.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file nios_sys/synthesis/nios_sys_rst_controller_001.vhd
+    Info (12022): Found design unit 1: nios_sys_rst_controller_001-rtl File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/nios_sys_rst_controller_001.vhd Line: 75
+    Info (12023): Found entity 1: nios_sys_rst_controller_001 File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/nios_sys_rst_controller_001.vhd Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/altera_reset_controller.v
+    Info (12023): Found entity 1: altera_reset_controller File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_reset_controller.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/altera_reset_synchronizer.v
+    Info (12023): Found entity 1: altera_reset_synchronizer File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_reset_synchronizer.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_irq_mapper.sv
+    Info (12023): Found entity 1: nios_sys_irq_mapper File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_irq_mapper.sv Line: 31
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0.v
+    Info (12023): Found entity 1: nios_sys_mm_interconnect_0 File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_avalon_st_adapter.v
+    Info (12023): Found entity 1: nios_sys_mm_interconnect_0_avalon_st_adapter File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_avalon_st_adapter.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+    Info (12023): Found entity 1: nios_sys_mm_interconnect_0_avalon_st_adapter_error_adapter_0 File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv Line: 66
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v
+    Info (12023): Found entity 1: altera_avalon_st_handshake_clock_crosser File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/altera_avalon_st_clock_crosser.v
+    Info (12023): Found entity 1: altera_avalon_st_clock_crosser File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_avalon_st_clock_crosser.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/altera_avalon_st_pipeline_base.v
+    Info (12023): Found entity 1: altera_avalon_st_pipeline_base File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_avalon_st_pipeline_base.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/altera_std_synchronizer_nocut.v
+    Info (12023): Found entity 1: altera_std_synchronizer_nocut File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_std_synchronizer_nocut.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_rsp_mux_001.sv
+    Info (12023): Found entity 1: nios_sys_mm_interconnect_0_rsp_mux_001 File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_rsp_mux_001.sv Line: 51
+Info (12021): Found 2 design units, including 2 entities, in source file nios_sys/synthesis/submodules/altera_merlin_arbitrator.sv
+    Info (12023): Found entity 1: altera_merlin_arbitrator File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_merlin_arbitrator.sv Line: 103
+    Info (12023): Found entity 2: altera_merlin_arb_adder File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_merlin_arbitrator.sv Line: 228
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_rsp_mux.sv
+    Info (12023): Found entity 1: nios_sys_mm_interconnect_0_rsp_mux File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_rsp_mux.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_rsp_demux_002.sv
+    Info (12023): Found entity 1: nios_sys_mm_interconnect_0_rsp_demux_002 File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_rsp_demux_002.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_rsp_demux.sv
+    Info (12023): Found entity 1: nios_sys_mm_interconnect_0_rsp_demux File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_rsp_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_cmd_mux_001.sv
+    Info (12023): Found entity 1: nios_sys_mm_interconnect_0_cmd_mux_001 File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_cmd_mux_001.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_cmd_mux.sv
+    Info (12023): Found entity 1: nios_sys_mm_interconnect_0_cmd_mux File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_cmd_mux.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_cmd_demux_001.sv
+    Info (12023): Found entity 1: nios_sys_mm_interconnect_0_cmd_demux_001 File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_cmd_demux_001.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_cmd_demux.sv
+    Info (12023): Found entity 1: nios_sys_mm_interconnect_0_cmd_demux File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_cmd_demux.sv Line: 43
+Info (12021): Found 2 design units, including 2 entities, in source file nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_router_003.sv
+    Info (12023): Found entity 1: nios_sys_mm_interconnect_0_router_003_default_decode File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_router_003.sv Line: 45
+    Info (12023): Found entity 2: nios_sys_mm_interconnect_0_router_003 File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_router_003.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_router_002.sv
+    Info (12023): Found entity 1: nios_sys_mm_interconnect_0_router_002_default_decode File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_router_002.sv Line: 45
+    Info (12023): Found entity 2: nios_sys_mm_interconnect_0_router_002 File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_router_002.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_router_001.sv
+    Info (12023): Found entity 1: nios_sys_mm_interconnect_0_router_001_default_decode File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_router_001.sv Line: 45
+    Info (12023): Found entity 2: nios_sys_mm_interconnect_0_router_001 File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_router_001.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_router.sv
+    Info (12023): Found entity 1: nios_sys_mm_interconnect_0_router_default_decode File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_router.sv Line: 45
+    Info (12023): Found entity 2: nios_sys_mm_interconnect_0_router File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_router.sv Line: 84
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/altera_avalon_sc_fifo.v
+    Info (12023): Found entity 1: altera_avalon_sc_fifo File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_avalon_sc_fifo.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/altera_merlin_slave_agent.sv
+    Info (12023): Found entity 1: altera_merlin_slave_agent File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_merlin_slave_agent.sv Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+    Info (12023): Found entity 1: altera_merlin_burst_uncompressor File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_merlin_burst_uncompressor.sv Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/altera_merlin_master_agent.sv
+    Info (12023): Found entity 1: altera_merlin_master_agent File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_merlin_master_agent.sv Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/altera_merlin_slave_translator.sv
+    Info (12023): Found entity 1: altera_merlin_slave_translator File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_merlin_slave_translator.sv Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/altera_merlin_master_translator.sv
+    Info (12023): Found entity 1: altera_merlin_master_translator File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_merlin_master_translator.sv Line: 32
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_sys_id.v
+    Info (12023): Found entity 1: nios_sys_sys_id File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_sys_id.v Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_spi_lis3dh.v
+    Info (12023): Found entity 1: nios_sys_spi_lis3dh File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_spi_lis3dh.v Line: 41
+Info (12021): Found 4 design units, including 4 entities, in source file nios_sys/synthesis/submodules/nios_sys_pll.v
+    Info (12023): Found entity 1: nios_sys_pll_dffpipe_l2c File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_pll.v Line: 37
+    Info (12023): Found entity 2: nios_sys_pll_stdsync_sv6 File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_pll.v Line: 98
+    Info (12023): Found entity 3: nios_sys_pll_altpll_es22 File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_pll.v Line: 130
+    Info (12023): Found entity 4: nios_sys_pll File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_pll.v Line: 213
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_pio_lis3dh.v
+    Info (12023): Found entity 1: nios_sys_pio_lis3dh File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_pio_lis3dh.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_pio_leds.v
+    Info (12023): Found entity 1: nios_sys_pio_leds File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_pio_leds.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_onchip_ram.v
+    Info (12023): Found entity 1: nios_sys_onchip_ram File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_onchip_ram.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_nios.v
+    Info (12023): Found entity 1: nios_sys_nios File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios.v Line: 9
+Info (12021): Found 21 design units, including 21 entities, in source file nios_sys/synthesis/submodules/nios_sys_nios_cpu.v
+    Info (12023): Found entity 1: nios_sys_nios_cpu_register_bank_a_module File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 21
+    Info (12023): Found entity 2: nios_sys_nios_cpu_register_bank_b_module File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 87
+    Info (12023): Found entity 3: nios_sys_nios_cpu_nios2_oci_debug File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 153
+    Info (12023): Found entity 4: nios_sys_nios_cpu_nios2_oci_break File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 295
+    Info (12023): Found entity 5: nios_sys_nios_cpu_nios2_oci_xbrk File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 588
+    Info (12023): Found entity 6: nios_sys_nios_cpu_nios2_oci_dbrk File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 795
+    Info (12023): Found entity 7: nios_sys_nios_cpu_nios2_oci_itrace File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 982
+    Info (12023): Found entity 8: nios_sys_nios_cpu_nios2_oci_td_mode File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 1115
+    Info (12023): Found entity 9: nios_sys_nios_cpu_nios2_oci_dtrace File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 1183
+    Info (12023): Found entity 10: nios_sys_nios_cpu_nios2_oci_compute_input_tm_cnt File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 1265
+    Info (12023): Found entity 11: nios_sys_nios_cpu_nios2_oci_fifo_wrptr_inc File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 1337
+    Info (12023): Found entity 12: nios_sys_nios_cpu_nios2_oci_fifo_cnt_inc File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 1380
+    Info (12023): Found entity 13: nios_sys_nios_cpu_nios2_oci_fifo File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 1427
+    Info (12023): Found entity 14: nios_sys_nios_cpu_nios2_oci_pib File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 1913
+    Info (12023): Found entity 15: nios_sys_nios_cpu_nios2_oci_im File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 1936
+    Info (12023): Found entity 16: nios_sys_nios_cpu_nios2_performance_monitors File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 2006
+    Info (12023): Found entity 17: nios_sys_nios_cpu_nios2_avalon_reg File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 2023
+    Info (12023): Found entity 18: nios_sys_nios_cpu_ociram_sp_ram_module File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 2116
+    Info (12023): Found entity 19: nios_sys_nios_cpu_nios2_ocimem File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 2181
+    Info (12023): Found entity 20: nios_sys_nios_cpu_nios2_oci File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 2362
+    Info (12023): Found entity 21: nios_sys_nios_cpu File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v Line: 2834
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_nios_cpu_debug_slave_sysclk.v
+    Info (12023): Found entity 1: nios_sys_nios_cpu_debug_slave_sysclk File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu_debug_slave_sysclk.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_nios_cpu_debug_slave_tck.v
+    Info (12023): Found entity 1: nios_sys_nios_cpu_debug_slave_tck File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu_debug_slave_tck.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_nios_cpu_debug_slave_wrapper.v
+    Info (12023): Found entity 1: nios_sys_nios_cpu_debug_slave_wrapper File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu_debug_slave_wrapper.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file nios_sys/synthesis/submodules/nios_sys_nios_cpu_test_bench.v
+    Info (12023): Found entity 1: nios_sys_nios_cpu_test_bench File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu_test_bench.v Line: 21
+Info (12021): Found 5 design units, including 5 entities, in source file nios_sys/synthesis/submodules/nios_sys_jtag_uart.v
+    Info (12023): Found entity 1: nios_sys_jtag_uart_sim_scfifo_w File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_jtag_uart.v Line: 21
+    Info (12023): Found entity 2: nios_sys_jtag_uart_scfifo_w File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_jtag_uart.v Line: 78
+    Info (12023): Found entity 3: nios_sys_jtag_uart_sim_scfifo_r File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_jtag_uart.v Line: 164
+    Info (12023): Found entity 4: nios_sys_jtag_uart_scfifo_r File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_jtag_uart.v Line: 243
+    Info (12023): Found entity 5: nios_sys_jtag_uart File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_jtag_uart.v Line: 331
+Info (12021): Found 2 design units, including 1 entities, in source file reset_gen.vhd
+    Info (12022): Found design unit 1: RESET_GEN-content File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/RESET_GEN.vhd Line: 17
+    Info (12023): Found entity 1: RESET_GEN File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/RESET_GEN.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file nios_lab_top.vhd
+    Info (12022): Found design unit 1: nios_lab_top-rtl File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_lab_top.vhd Line: 22
+    Info (12023): Found entity 1: nios_lab_top File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_lab_top.vhd Line: 8
+Error (12049): Can't compile duplicate declarations of entity "nios_sys" into library "nios_sys" File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/db/ip/nios_sys/nios_sys.v Line: 6
+    Error (12180): Instance could be entity "nios_sys" in file nios_sys/synthesis/nios_sys.vhd compiled in library nios_sys File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/nios_sys.vhd Line: 9
+    Error (12180): Instance could be entity "nios_sys" in file d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/nios_sys.v compiled in library nios_sys File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/db/ip/nios_sys/nios_sys.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_sys/nios_sys.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/altera_avalon_sc_fifo.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_avalon_sc_fifo.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/altera_avalon_sc_fifo.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/altera_avalon_st_clock_crosser.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_avalon_st_clock_crosser.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/altera_avalon_st_clock_crosser.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/altera_avalon_st_handshake_clock_crosser.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/altera_avalon_st_handshake_clock_crosser.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/altera_avalon_st_pipeline_base.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_avalon_st_pipeline_base.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/altera_avalon_st_pipeline_base.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/altera_merlin_arbitrator.sv" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_merlin_arbitrator.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/altera_merlin_arbitrator.sv
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/altera_merlin_burst_uncompressor.sv" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_merlin_burst_uncompressor.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/altera_merlin_burst_uncompressor.sv
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/altera_merlin_master_agent.sv" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_merlin_master_agent.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/altera_merlin_master_agent.sv
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/altera_merlin_master_translator.sv" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_merlin_master_translator.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/altera_merlin_master_translator.sv
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/altera_merlin_slave_agent.sv" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_merlin_slave_agent.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/altera_merlin_slave_agent.sv
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/altera_merlin_slave_translator.sv" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_merlin_slave_translator.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/altera_merlin_slave_translator.sv
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/altera_reset_controller.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_reset_controller.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/altera_reset_controller.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/altera_reset_synchronizer.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_reset_synchronizer.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/altera_reset_synchronizer.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/altera_std_synchronizer_nocut.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/altera_std_synchronizer_nocut.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/altera_std_synchronizer_nocut.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_irq_mapper.sv" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_irq_mapper.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_irq_mapper.sv
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_jtag_uart.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_jtag_uart.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_jtag_uart.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_avalon_st_adapter.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_avalon_st_adapter.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_avalon_st_adapter.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_cmd_demux.sv" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_cmd_demux.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_cmd_demux.sv
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_cmd_demux_001.sv" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_cmd_demux_001.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_cmd_demux_001.sv
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_cmd_mux.sv" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_cmd_mux.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_cmd_mux.sv
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_cmd_mux_001.sv" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_cmd_mux_001.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_cmd_mux_001.sv
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_router.sv" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_router.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_router.sv
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_router_001.sv" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_router_001.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_router_001.sv
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_router_002.sv" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_router_002.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_router_002.sv
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_router_003.sv" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_router_003.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_router_003.sv
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_rsp_demux.sv" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_rsp_demux.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_rsp_demux.sv
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_rsp_demux_002.sv" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_rsp_demux_002.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_rsp_demux_002.sv
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_rsp_mux.sv" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_rsp_mux.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_rsp_mux.sv
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_rsp_mux_001.sv" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_mm_interconnect_0_rsp_mux_001.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_mm_interconnect_0_rsp_mux_001.sv
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_nios.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_nios.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_nios_cpu.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_nios_cpu.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_nios_cpu_debug_slave_sysclk.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu_debug_slave_sysclk.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_nios_cpu_debug_slave_sysclk.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_nios_cpu_debug_slave_tck.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu_debug_slave_tck.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_nios_cpu_debug_slave_tck.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_nios_cpu_debug_slave_wrapper.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu_debug_slave_wrapper.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_nios_cpu_debug_slave_wrapper.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_nios_cpu_test_bench.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_nios_cpu_test_bench.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_nios_cpu_test_bench.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_onchip_ram.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_onchip_ram.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_onchip_ram.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_pio_leds.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_pio_leds.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_pio_leds.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_pio_lis3dh.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_pio_lis3dh.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_pio_lis3dh.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_pll.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_pll.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_pll.v
+Info (15248): File "d:/programmen/intelfpga_lite/17.1/projekte/max1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_spi_lis3dh.v" is a duplicate of already analyzed file "D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_spi_lis3dh.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_spi_lis3dh.v
+Error (10228): Verilog HDL error at nios_sys_sys_id.v(34): module "nios_sys_sys_id" cannot be declared more than once File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/db/ip/nios_sys/submodules/nios_sys_sys_id.v Line: 34
+Info (10499): HDL info at nios_sys_sys_id.v(34): see declaration for object "nios_sys_sys_id" File: D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/nios_sys/synthesis/submodules/nios_sys_sys_id.v Line: 34
+Info (12021): Found 0 design units, including 0 entities, in source file db/ip/nios_sys/submodules/nios_sys_sys_id.v
+Info (144001): Generated suppressed messages file D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/output_files/Max1000_nios_top.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 3 warnings
+    Error: Peak virtual memory: 712 megabytes
+    Error: Processing ended: Fri Mar 09 15:00:07 2018
+    Error: Elapsed time: 00:00:50
+    Error: Total CPU time (on all processors): 00:01:44
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/Programmen/intelFPGA_lite/17.1/Projekte/MAX1000_nios_lab/output_files/Max1000_nios_top.map.smsg.
+
+
